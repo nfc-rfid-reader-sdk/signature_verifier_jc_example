@@ -27,7 +27,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  */
 
-// uFR .X509 Verifier version 1.3
+// uFR .X509 Verifier version 2.0
 
 var r;
 var progress;
@@ -46,7 +46,7 @@ window.onload = function() {
         	cert_box = document.getElementById("certificate");
         	cert_box.value = 'Uploading pem file: "' + pem_file.files[0].name + '"' + "\r\n";
         	cert_box.value += "Checking certificate...\r\n";
-        	upload(pem_file.files[0], json, 'http://zboractest.d-logic.net/proxy/x509-verifier.php');
+        	upload(pem_file.files[0], json, 'http://signatureverifier.d-logic.com/x509-verifier.php');
         }
         else
         	alert("Please select PDF file to upload.");
@@ -66,7 +66,7 @@ window.onload = function() {
         	cert_box = document.getElementById("certificate");
         	cert_box.value = 'Uploading PDF file: "' + pdf_file.files[0].name + '"' + "\r\n";
         	cert_box.value += "Checking signature...\r\n";
-        	upload(pdf_file.files[0], json, 'http://zboractest.d-logic.net/proxy/pdf-sgn-verifier.php');
+        	upload(pdf_file.files[0], json, 'http://signatureverifier.d-logic.com/pdf-sgn-verifier.php');
         }
         else
         	alert("Please select PDF file to upload.");
